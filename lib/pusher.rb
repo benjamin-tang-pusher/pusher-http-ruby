@@ -40,7 +40,7 @@ module Pusher
     def_delegators :default_client, :get, :get_async, :post, :post_async
     def_delegators :default_client, :channels, :channel_info, :channel_users
     def_delegators :default_client, :trigger, :trigger_batch, :trigger_async, :trigger_batch_async
-    def_delegators :default_client, :authenticate, :webhook, :channel, :[]
+    def_delegators :default_client, :authenticate, :webhook, :channel, :[], :authenticate_user
     def_delegators :default_client, :notify
 
     attr_writer :logger
