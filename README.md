@@ -231,6 +231,14 @@ pusher.authenticate('presence-my_channel', params[:socket_id],
 )
 ```
 
+## Authenticating Users
+Respond to [User Authentication] (https://pusher.com/docs/channels/using_channels/user-authentication/) requests with the `authenticate_user` method.
+
+``` ruby
+user_data = { id: 'user_id', user_name: 'user_name' }
+pusher.authenticate_user(params[:socket_id], user_data)
+```
+
 ## Receiving WebHooks
 
 A WebHook object may be created to validate received WebHooks against your app credentials, and to extract events. It should be created with the `Rack::Request` object (available as `request` in Rails controllers or Sinatra handlers for example).
